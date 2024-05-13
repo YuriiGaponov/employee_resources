@@ -1,6 +1,7 @@
 asgiref==3.8.1
 colorama==0.4.6
 Django==4.2.11
+django-bootstrap5==24.2
 exceptiongroup==1.2.1
 iniconfig==2.0.0
 packaging==24.0
