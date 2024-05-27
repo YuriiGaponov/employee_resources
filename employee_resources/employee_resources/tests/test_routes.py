@@ -6,7 +6,7 @@ from django.urls import reverse
 
 @pytest.mark.parametrize(
         'name',
-        ('pages:index',)
+        ('pages:index', 'employees:employees'),
 )
 def test_common_pages_availability_for_anonymous_user(client, name):
     url = reverse(name)

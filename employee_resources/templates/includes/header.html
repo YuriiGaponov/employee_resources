@@ -1,6 +1,7 @@
 {% load static %}
 {% load django_bootstrap5 %}
 <header>
+  Меню:
   <nav class="navbar navbar-dark bg-primary">
     <div class="container">
       <button type="button" class="btn btn-primary btn-lg">
@@ -8,7 +9,11 @@
           Главная
         </a>
       </button>
+      <button type="button" class="btn btn-primary btn-lg">
+        <a href={% url "employees:employees" %}>
+          Сотрудники
+        </a>
+      </button>
     </div>
   </nav>
-  Чердак
 </header>
