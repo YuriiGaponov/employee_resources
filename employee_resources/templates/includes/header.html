@@ -1,19 +1,22 @@
 {% load static %}
 {% load django_bootstrap5 %}
 <header>
-  Меню:
-  <nav class="navbar navbar-dark bg-primary">
+  <nav class="navbar navbar-light" style="background-color: lightskyblue">
     <div class="container">
-      <button type="button" class="btn btn-primary btn-lg">
-        <a href={% url "pages:index" %}>
-          Главная
-        </a>
-      </button>
-      <button type="button" class="btn btn-primary btn-lg">
-        <a href={% url "employees:employees" %}>
-          Сотрудники
-        </a>
-      </button>
+      {% with request.resolver_match.view_name as view_name %}
+        <ul class="nav  nav-pills">
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'pages:index' %} text-white {% endif %}" href="{% url 'pages:index' %}">
+              Главная
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if view_name == 'employees:employees' %} text-white {% endif %}" href="{% url 'employees:employees' %}">
+              Сотрудники
+            </a>
+          </li>
+        </ul>
+      {% endwith %}
     </div>
   </nav>
 </header>
